@@ -1,16 +1,18 @@
-import { ThemeProvider, BaseStyles } from '@primer/react'
+import { ThemeProvider, BaseStyles } from '@primer/react';
+import ColorModeSwitcher from './ColorModeSwitcher';
+import { Payment } from './pages/Payment';
+import { Navigation } from './components/Navigation/Navigation';
 
-import Playground from './Playground'
-import ColorModeSwitcher from './ColorModeSwitcher'
 function App() {
-    return (
-        <ThemeProvider colorMode="auto">
-            <BaseStyles>
-                <Playground />
-                <ColorModeSwitcher />
-            </BaseStyles>
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider colorMode='light'>
+      <BaseStyles>
+        <ColorModeSwitcher />
+        <Navigation />
+        <Payment />
+      </BaseStyles>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
