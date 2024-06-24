@@ -55,6 +55,9 @@ export function Seats() {
                 mb: 0,
                 fontWeight: '600',
                 display: 'block',
+                textAlign: 'right',
+                flexShrink: 0,
+                width: '110px',
               }}
             >
               {ConvertToPrice(product.price, 0)} / {product.license}
