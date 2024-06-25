@@ -18,7 +18,7 @@ export function Line({
         display: 'flex',
         flexDirection: 'column',
         borderBottom: condensed ? 'none' : '1px solid',
-        borderColor: condensed ? 'none' : 'var(--van-gray-3)',
+        borderColor: condensed ? 'none' : 'border.muted',
         py: condensed ? 0 : 3,
       }}
     >

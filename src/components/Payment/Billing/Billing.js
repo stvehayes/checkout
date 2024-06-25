@@ -1,5 +1,4 @@
 import { Avatar, Box, Text } from '@primer/react';
-import { Header } from '../../Header/Header';
 import { Section } from '../../Section/Section';
 import { billing } from '../../../data/Data';
 
@@ -12,7 +11,6 @@ export function Billing() {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: ['column', null, 'row'],
         }}
       >
         <Box
@@ -43,8 +41,8 @@ export function Billing() {
             flexDirection: 'column',
             width: '100%',
             pl: 4,
-            borderLeft: [null, null, '1px solid'],
-            borderColor: [null, null, 'var(--van-gray-3)'],
+            borderLeft: '1px solid',
+            borderColor: 'border.muted',
           }}
         >
           <Text sx={{ fontSize: 1, fontWeight: '600' }}>{billing.company}</Text>

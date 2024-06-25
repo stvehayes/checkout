@@ -1,14 +1,11 @@
-import { useContext } from 'react';
 import { Box, Text } from '@primer/react';
 import { Section } from '../../Section/Section';
 import { product } from '../../../data/Data';
 import { ConvertToPrice } from '../../../util/Helpers';
 import { Stepper } from '../../Stepper/Stepper';
-import { SeatsContext } from '../../../context/SeatsContext';
 import { Control } from '../../Control/Control';
 
 export function Seats() {
-  const { seats, updateSeats } = useContext(SeatsContext);
   return (
     <Section title='Total seats'>
       <Box
@@ -43,7 +40,6 @@ export function Seats() {
         <Box>
           <Box
             sx={{
-              display: 'flex',
               flexDirection: 'column',
               display: 'inline-flex',
               alignItems: 'flex-end',

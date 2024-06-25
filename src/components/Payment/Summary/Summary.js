@@ -19,7 +19,7 @@ export function Summary() {
           fontSize: 2,
           pb: 3,
           borderBottom: '1px solid',
-          borderColor: 'var(--van-gray-3)',
+          borderColor: 'border.muted',
         }}
       >
         Summary
@@ -37,7 +37,7 @@ export function Summary() {
         sx={{
           py: 3,
           borderBottom: '1px solid',
-          borderColor: 'var(--van-gray-3)',
+          borderColor: 'border.muted',
         }}
       >
         <Line
