@@ -1,6 +1,9 @@
-import { Text, SegmentedControl } from '@primer/react';
+import { useContext } from 'react';
+import { SegmentedControl } from '@primer/react';
+import { CadenceContext } from '../../context/CadenceContext';
 
 export function Control() {
+  const { cadence, updateCadence } = useContext(CadenceContext);
   return (
     <SegmentedControl
       aria-label='Monthly or yearly picker'
@@ -9,8 +12,15 @@ export function Control() {
         mb: 4,
       }}
     >
-      <SegmentedControl.Button defaultSelected>Monthly</SegmentedControl.Button>
       <SegmentedControl.Button
+        onClick={() => updateCadence('monthly')}
+        selected={cadence === 'monthly'}
+      >
+        Monthly
+      </SegmentedControl.Button>
+      <SegmentedControl.Button
+        onClick={() => updateCadence('yearly')}
+        selected={cadence === 'yearly'}
         sx={{
           flexGrow: 0,
           button: {

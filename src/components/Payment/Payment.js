@@ -1,4 +1,4 @@
-import { Box, Button, Heading, PageLayout, Text } from '@primer/react';
+import { Box, Button, Heading, PageLayout } from '@primer/react';
 import { product } from '../../data/Data';
 import { ArrowLeftIcon } from '@primer/octicons-react';
 import { Account } from '../../components/Payment/Account/Account';
@@ -11,9 +11,10 @@ export function Payment() {
   return (
     <PageLayout
       sx={{
-        minHeight: '100%',
+        height: 'calc(100vh - 66px)',
         display: 'flex',
         flexDirection: 'column',
+        bg: 'canvas.default',
       }}
     >
       <PageLayout.Header>

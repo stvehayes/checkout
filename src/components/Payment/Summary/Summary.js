@@ -4,12 +4,15 @@ import { Section } from '../../Section/Section';
 import { SeatsContext } from '../../../context/SeatsContext';
 import { Line } from './Line/Line';
 import { product } from '../../../data/Data';
-import { CalculateSalesTax } from '../../../util/Helpers';
+import { ConvertToPrice, CalculateSalesTax } from '../../../util/Helpers';
+import { CadenceContext } from '../../../context/CadenceContext';
 
 export function Summary() {
   const { seats } = useContext(SeatsContext);
-
-  const total = seats * product.price;
+  const { cadence } = useContext(CadenceContext);
+  const currentCadence =
+    cadence === 'monthly' ? product.priceMonthly : product.priceYearly;
+  const total = seats * currentCadence;
   const tax = CalculateSalesTax(total);
 
   return (
@@ -28,10 +31,8 @@ export function Summary() {
         title={product.type}
         seats={seats}
         license={product.license}
-        price={seats * product.price}
-        cadence={
-          product.cadence.charAt(0).toUpperCase() + product.cadence.slice(1)
-        }
+        price={seats * currentCadence}
+        cadence={cadence.charAt(0).toUpperCase() + cadence.slice(1)}
       />
       <Box
         sx={{
@@ -52,9 +53,9 @@ export function Summary() {
         />
       </Box>
       <Line
-        title='Monthly payment'
+        title={`${cadence.charAt(0).toUpperCase() + cadence.slice(1)} total`}
         price={total + tax}
-        description='Due on July 1, 2024'
+        description={cadence === 'monthly' ? 'Due on July 1, 2024' : null}
         bold
       />
       <Box
@@ -69,7 +70,9 @@ export function Summary() {
             mb: 2,
           }}
         >
-          Complete purchase
+          {cadence === 'monthly'
+            ? 'Complete purchase'
+            : `Pay now (${ConvertToPrice(total + tax)})`}
         </Button>
         <Button
           sx={{

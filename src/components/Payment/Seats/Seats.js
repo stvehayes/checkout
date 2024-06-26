@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Box, Text } from '@primer/react';
 import { Section } from '../../Section/Section';
 import { product } from '../../../data/Data';
 import { ConvertToPrice } from '../../../util/Helpers';
 import { Stepper } from '../../Stepper/Stepper';
 import { Control } from '../../Control/Control';
+import { CadenceContext } from '../../../context/CadenceContext';
 
 export function Seats() {
+  const { cadence } = useContext(CadenceContext);
   return (
     <Section title='Total seats'>
       <Box
@@ -22,7 +25,7 @@ export function Seats() {
             flexDirection: 'column',
           }}
         >
-          {product.type !== 'Enterprise' && <Control />}
+          {product.type === 'Enterprise' && <Control />}
           <Text
             sx={{
               fontSize: 1,
@@ -50,13 +53,19 @@ export function Seats() {
                 fontSize: 1,
                 mb: 0,
                 fontWeight: '600',
-                display: 'block',
+                display: 'inline-block',
                 textAlign: 'right',
                 flexShrink: 0,
-                width: '110px',
+                width: '120px',
               }}
             >
-              {ConvertToPrice(product.price, 0)} / {product.license}
+              {ConvertToPrice(
+                cadence === 'monthly'
+                  ? product.priceMonthly
+                  : product.priceYearly,
+                0
+              )}{' '}
+              / {product.license}
             </Text>
             <Text sx={{ fontSize: 0, color: 'fg.muted' }}>
               {product.cadence === 'monthly' ? 'per month' : 'per year'}

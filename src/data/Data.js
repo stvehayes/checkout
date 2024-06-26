@@ -1,20 +1,22 @@
-export const product = {
-  type: 'Advanced Security',
-  seats: 100,
-  price: 49,
-  description: 'Security, compliance, and flexible deployment for enterprises',
-  cadence: 'monthly',
-  license: 'committer',
-};
-
 // export const product = {
-//   type: 'Enterprise',
-//   seats: 10,
-//   price: 21,
+//   type: 'Advanced Security',
+//   seats: 100,
+//   priceMonthly: 49,
+//   priceYearly: 588,
 //   description: 'Security, compliance, and flexible deployment for enterprises',
 //   cadence: 'monthly',
-//   license: 'user',
+//   license: 'committer',
 // };
+
+export const product = {
+  type: 'Enterprise',
+  seats: 10,
+  priceMonthly: 21,
+  priceYearly: 231,
+  description: 'Security, compliance, and flexible deployment for enterprises',
+  cadence: 'monthly',
+  license: 'user',
+};
 
 export const organization = {
   name: 'GitHub',
