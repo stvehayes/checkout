@@ -5,7 +5,6 @@ import { ProductsContext } from './context/ProductsContext';
 
 export function ProductSwitcher() {
   const { selectedProduct, setSelectedProduct } = useContext(ProductsContext);
-  const product = products[selectedProduct];
 
   return (
     <Box>
@@ -29,7 +28,7 @@ export function ProductSwitcher() {
                   <ActionList.Item
                     key={product.value}
                     href='#'
-                    selected={index === selectedProduct}
+                    selected={product === selectedProduct}
                     onSelect={() => setSelectedProduct(index)}
                   >
                     {product.type}
