@@ -5,7 +5,7 @@ export const products = [
     priceMonthly: 49,
     priceYearly: 588,
     description:
-      'Security, compliance, and flexible deployment for enterprises',
+      'Code scanning, secret scanning, and dependency review for your codebase.',
     cadence: 'monthly',
     license: 'committer',
   },
