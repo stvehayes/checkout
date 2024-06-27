@@ -1,13 +1,18 @@
+import { useContext } from 'react';
 import { Box, Button, Heading, PageLayout } from '@primer/react';
-import { product } from '../../data/Data';
+import { products } from '../../data/Data';
 import { ArrowLeftIcon } from '@primer/octicons-react';
 import { Account } from '../../components/Payment/Account/Account';
 import { Seats } from '../../components/Payment/Seats/Seats';
 import { Billing } from '../../components/Payment/Billing/Billing';
 import { Method } from '../../components/Payment/Method/Method';
 import { Summary } from '../../components/Payment/Summary/Summary';
+import { ProductsContext } from '../../context/ProductsContext';
 
 export function Payment() {
+  const { selectedProduct } = useContext(ProductsContext);
+  const product = products[selectedProduct];
+
   return (
     <PageLayout
       sx={{

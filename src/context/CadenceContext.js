@@ -1,9 +1,12 @@
-import React, { createContext, useState } from 'react';
-import { product } from '../data/Data';
+import { createContext, useContext, useState } from 'react';
+import { products } from '../data/Data';
+import { ProductsContext } from './ProductsContext';
 
 const CadenceContext = createContext();
 
 const CadenceProvider = ({ children }) => {
+  const { selectedProduct } = useContext(ProductsContext);
+  const product = products[selectedProduct];
   const [cadence, setCadence] = useState(product.cadence || 'monthly');
 
   const updateCadence = (type) => {

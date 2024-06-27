@@ -45,7 +45,7 @@ function ColorModeSwitcher() {
   const current = schemes.find((scheme) => scheme.value === colorScheme);
 
   return (
-    <Box sx={{ position: 'absolute', bottom: 0, right: 0, p: 3 }}>
+    <Box>
       <Box
         sx={{
           position: 'relative',

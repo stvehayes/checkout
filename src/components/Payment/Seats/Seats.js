@@ -1,14 +1,18 @@
 import { useContext } from 'react';
 import { Box, Text } from '@primer/react';
 import { Section } from '../../Section/Section';
-import { product } from '../../../data/Data';
+import { products } from '../../../data/Data';
 import { ConvertToPrice } from '../../../util/Helpers';
 import { Stepper } from '../../Stepper/Stepper';
 import { Control } from '../../Control/Control';
 import { CadenceContext } from '../../../context/CadenceContext';
+import { ProductsContext } from '../../../context/ProductsContext';
 
 export function Seats() {
   const { cadence } = useContext(CadenceContext);
+  const { selectedProduct } = useContext(ProductsContext);
+  const product = products[selectedProduct];
+
   return (
     <Section title='Total seats'>
       <Box

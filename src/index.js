@@ -4,16 +4,19 @@ import App from './App';
 import './reset.css';
 import { SeatsProvider } from './context/SeatsContext';
 import { CadenceProvider } from './context/CadenceContext';
+import { ProductsProvider } from './context/ProductsContext';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <CadenceProvider>
-      <SeatsProvider>
-        <App />
-      </SeatsProvider>
-    </CadenceProvider>
+    <ProductsProvider>
+      <CadenceProvider>
+        <SeatsProvider>
+          <App />
+        </SeatsProvider>
+      </CadenceProvider>
+    </ProductsProvider>
   </StrictMode>
 );

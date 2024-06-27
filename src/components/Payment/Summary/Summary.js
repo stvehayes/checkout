@@ -3,13 +3,17 @@ import { Box, Button, Heading, Link, Text } from '@primer/react';
 import { Section } from '../../Section/Section';
 import { SeatsContext } from '../../../context/SeatsContext';
 import { Line } from './Line/Line';
-import { product } from '../../../data/Data';
+import { products } from '../../../data/Data';
 import { ConvertToPrice, CalculateSalesTax } from '../../../util/Helpers';
 import { CadenceContext } from '../../../context/CadenceContext';
+import { ProductsContext } from '../../../context/ProductsContext';
 
 export function Summary() {
+  const { selectedProduct } = useContext(ProductsContext);
+  const product = products[selectedProduct];
   const { seats } = useContext(SeatsContext);
   const { cadence } = useContext(CadenceContext);
+
   const currentCadence =
     cadence === 'monthly' ? product.priceMonthly : product.priceYearly;
   const total = seats * currentCadence;
