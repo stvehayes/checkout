@@ -15,7 +15,7 @@ export function Summary() {
   const { cadence } = useContext(CadenceContext);
 
   const currentCadence =
-    cadence === 'monthly' ? product.priceMonthly : product.priceYearly;
+    cadence === 'monthly' ? product.price.monthly : product.price.yearly;
   const total = seats * currentCadence;
   const tax = CalculateSalesTax(total);
 

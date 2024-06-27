@@ -2,8 +2,10 @@ export const products = [
   {
     type: 'Advanced Security',
     seats: 100,
-    priceMonthly: 49,
-    priceYearly: 588,
+    price: {
+      monthly: 49,
+      yearly: 588,
+    },
     description:
       'Code scanning, secret scanning, and dependency review for your codebase.',
     cadence: 'monthly',
@@ -12,8 +14,10 @@ export const products = [
   {
     type: 'Enterprise',
     seats: 10,
-    priceMonthly: 21,
-    priceYearly: 231,
+    price: {
+      monthly: 21,
+      yearly: 231,
+    },
     description:
       'Security, compliance, and flexible deployment for enterprises',
     cadence: 'monthly',

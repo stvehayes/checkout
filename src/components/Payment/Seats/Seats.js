@@ -65,8 +65,8 @@ export function Seats() {
             >
               {ConvertToPrice(
                 cadence === 'monthly'
-                  ? product.priceMonthly
-                  : product.priceYearly,
+                  ? product.price.monthly
+                  : product.price.yearly,
                 0
               )}{' '}
               / {product.license}
