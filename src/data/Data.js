@@ -1,5 +1,3 @@
-import { GlobeIcon } from '@primer/octicons-react';
-
 export const products = [
   {
     type: 'Advanced Security',

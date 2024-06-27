@@ -1,8 +1,7 @@
 import { useContext } from 'react';
-import { ActionMenu, ActionList, Box, Text } from '@primer/react';
+import { ActionMenu, ActionList, Box } from '@primer/react';
 import { products } from './data/Data';
 import { ProductsContext } from './context/ProductsContext';
-import { GlobeIcon, ShieldCheckIcon } from '@primer/octicons-react';
 
 export function ProductSwitcher() {
   const { selectedProduct, setSelectedProduct } = useContext(ProductsContext);
