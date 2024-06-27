@@ -1,7 +1,8 @@
 import { useContext } from 'react';
-import { ActionMenu, ActionList, Box } from '@primer/react';
+import { ActionMenu, ActionList, Box, Text } from '@primer/react';
 import { products } from './data/Data';
 import { ProductsContext } from './context/ProductsContext';
+import { GlobeIcon, ShieldCheckIcon } from '@primer/octicons-react';
 
 export function ProductSwitcher() {
   const { selectedProduct, setSelectedProduct } = useContext(ProductsContext);
@@ -17,7 +18,7 @@ export function ProductSwitcher() {
       >
         <ActionMenu>
           <ActionMenu.Button size='small'>
-            <Box sx={{ display: 'inline-block', ml: 2 }}>
+            <Box sx={{ display: 'inline-flex', alignItems: 'center', ml: 2 }}>
               {products[selectedProduct].type}
             </Box>
           </ActionMenu.Button>

@@ -20,6 +20,8 @@ export function Payment() {
         display: 'flex',
         flexDirection: 'column',
         bg: 'canvas.default',
+        maxWidth: '1080px',
+        margin: '0 auto',
       }}
     >
       <PageLayout.Header>

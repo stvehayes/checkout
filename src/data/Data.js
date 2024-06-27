@@ -1,22 +1,4 @@
-// export const product = {
-//   type: 'Advanced Security',
-//   seats: 100,
-//   priceMonthly: 49,
-//   priceYearly: 588,
-//   description: 'Security, compliance, and flexible deployment for enterprises',
-//   cadence: 'monthly',
-//   license: 'committer',
-// };
-
-// export const product = {
-//   type: 'Enterprise',
-//   seats: 10,
-//   priceMonthly: 21,
-//   priceYearly: 231,
-//   description: 'Security, compliance, and flexible deployment for enterprises',
-//   cadence: 'monthly',
-//   license: 'user',
-// };
+import { GlobeIcon } from '@primer/octicons-react';
 
 export const products = [
   {
