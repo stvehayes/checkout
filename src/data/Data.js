@@ -1,10 +1,11 @@
 export const products = [
   {
-    type: 'Advanced Security',
-    seats: 100,
+    type: 'Subscribe',
+    name: 'Advanced Security',
+    seats: 10,
     price: {
       monthly: 49,
-      yearly: 588,
+      yearly: null,
     },
     description:
       'Code scanning, secret scanning, and dependency review for your codebase.',
@@ -12,7 +13,8 @@ export const products = [
     license: 'committer',
   },
   {
-    type: 'Enterprise',
+    name: 'Enterprise',
+    type: 'Subscribe',
     seats: 10,
     price: {
       monthly: 21,
@@ -20,6 +22,30 @@ export const products = [
     },
     description:
       'Security, compliance, and flexible deployment for enterprises',
+    cadence: 'monthly',
+    license: 'user',
+  },
+  {
+    type: 'Subscribe',
+    name: 'Copilot',
+    seats: 10,
+    price: {
+      monthly: 19,
+      yearly: null,
+    },
+    description: 'The AI coding assistant elevating developer workflows',
+    cadence: 'monthly',
+    license: 'user',
+  },
+  {
+    type: 'Subscribe',
+    name: 'Team',
+    seats: 10,
+    price: {
+      monthly: 4,
+      yearly: 44,
+    },
+    description: 'Advanced collaboration and deployment features for teams',
     cadence: 'monthly',
     license: 'user',
   },

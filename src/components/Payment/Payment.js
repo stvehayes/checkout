@@ -8,6 +8,7 @@ import { Billing } from '../../components/Payment/Billing/Billing';
 import { Method } from '../../components/Payment/Method/Method';
 import { Summary } from '../../components/Payment/Summary/Summary';
 import { ProductsContext } from '../../context/ProductsContext';
+import { Form } from './Form/Form';
 
 export function Payment() {
   const { selectedProduct } = useContext(ProductsContext);
@@ -42,7 +43,7 @@ export function Payment() {
             borderColor: 'border.default',
           }}
         >
-          Subscribe to {product.type}
+          {product.type} to GitHub {product.name}
         </Heading>
       </PageLayout.Header>
       <PageLayout.Content
@@ -52,7 +53,7 @@ export function Payment() {
       >
         <Account />
         <Seats />
-        <Billing />
+        {product.form ? <Form /> : <Billing />}
         <Method />
       </PageLayout.Content>
       <PageLayout.Pane>

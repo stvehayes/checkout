@@ -25,7 +25,7 @@ export function ProductSwitcher() {
         <ActionMenu>
           <ActionMenu.Button size='small'>
             <Box sx={{ display: 'inline-flex', alignItems: 'center', ml: 2 }}>
-              {products[selectedProduct].type}
+              {products[selectedProduct].name}
             </Box>
           </ActionMenu.Button>
           <ActionMenu.Overlay align='right'>
@@ -35,10 +35,10 @@ export function ProductSwitcher() {
                   <ActionList.Item
                     key={product.value}
                     href='#'
-                    selected={product === selectedProduct}
+                    selected={index === selectedProduct}
                     onSelect={() => handleProductSwitch(index)}
                   >
-                    {product.type}
+                    {product.name}
                   </ActionList.Item>
                 ))}
               </ActionList.Group>

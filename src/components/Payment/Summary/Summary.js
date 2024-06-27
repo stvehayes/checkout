@@ -32,7 +32,7 @@ export function Summary() {
         Summary
       </Heading>
       <Line
-        title={product.type}
+        title={product.name}
         seats={seats}
         license={product.license}
         price={seats * currentCadence}

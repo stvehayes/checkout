@@ -29,7 +29,7 @@ export function Seats() {
             flexDirection: 'column',
           }}
         >
-          {product.type === 'Enterprise' && <Control />}
+          {product.price.monthly && product.price.yearly && <Control />}
           <Text
             sx={{
               fontSize: 1,
@@ -38,7 +38,7 @@ export function Seats() {
               display: 'block',
             }}
           >
-            {product.type}
+            {product.name}
           </Text>
           <Text sx={{ fontSize: 0, color: 'fg.muted' }}>
             {product.description}
@@ -77,14 +77,16 @@ export function Seats() {
           </Box>
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: 'block',
-          mt: 4,
-        }}
-      >
-        <Stepper />
-      </Box>
+      {product.seats !== null && (
+        <Box
+          sx={{
+            display: 'block',
+            mt: 4,
+          }}
+        >
+          <Stepper />
+        </Box>
+      )}
     </Section>
   );
 }

@@ -13,7 +13,7 @@ function App() {
             p: 3,
             display: 'flex',
             gap: 2,
-            position: 'absolute',
+            position: 'fixed',
             bottom: 0,
             right: 0,
           }}
