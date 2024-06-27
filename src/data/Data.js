@@ -1,18 +1,5 @@
 export const products = [
   {
-    type: 'Subscribe',
-    name: 'Advanced Security',
-    seats: 10,
-    price: {
-      monthly: 49,
-      yearly: null,
-    },
-    description:
-      'Code scanning, secret scanning, and dependency review for your codebase.',
-    cadence: 'monthly',
-    license: 'committer',
-  },
-  {
     name: 'Enterprise',
     type: 'Subscribe',
     seats: 10,
@@ -27,16 +14,30 @@ export const products = [
   },
   {
     type: 'Subscribe',
-    name: 'Copilot',
+    name: 'Advanced Security',
     seats: 10,
     price: {
-      monthly: 19,
+      monthly: 49,
       yearly: null,
     },
-    description: 'The AI coding assistant elevating developer workflows',
+    description:
+      'Code scanning, secret scanning, and dependency review for your codebase.',
     cadence: 'monthly',
-    license: 'user',
+    license: 'committer',
   },
+
+  // {
+  //   type: 'Subscribe',
+  //   name: 'Copilot',
+  //   seats: 10,
+  //   price: {
+  //     monthly: 19,
+  //     yearly: null,
+  //   },
+  //   description: 'The AI coding assistant elevating developer workflows',
+  //   cadence: 'monthly',
+  //   license: 'user',
+  // },
   {
     type: 'Subscribe',
     name: 'Team',
