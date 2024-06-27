@@ -2,9 +2,16 @@ import { useContext } from 'react';
 import { ActionMenu, ActionList, Box } from '@primer/react';
 import { products } from './data/Data';
 import { ProductsContext } from './context/ProductsContext';
+import { CadenceContext } from './context/CadenceContext';
 
 export function ProductSwitcher() {
   const { selectedProduct, setSelectedProduct } = useContext(ProductsContext);
+  const { updateCadence } = useContext(CadenceContext);
+
+  const handleProductSwitch = (index) => {
+    setSelectedProduct(index);
+    updateCadence('monthly');
+  };
 
   return (
     <Box>
@@ -29,7 +36,7 @@ export function ProductSwitcher() {
                     key={product.value}
                     href='#'
                     selected={product === selectedProduct}
-                    onSelect={() => setSelectedProduct(index)}
+                    onSelect={() => handleProductSwitch(index)}
                   >
                     {product.type}
                   </ActionList.Item>
