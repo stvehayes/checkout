@@ -20,8 +20,7 @@ export const products = [
       monthly: 49,
       yearly: null,
     },
-    description:
-      'Code scanning, secret scanning, and dependency review for your codebase.',
+    description: 'Code scanning, secret scanning, and dependency review',
     cadence: 'monthly',
     license: 'committer',
   },
