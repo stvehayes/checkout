@@ -4,6 +4,7 @@ import { CadenceContext } from '../../context/CadenceContext';
 
 export function Control() {
   const { cadence, updateCadence } = useContext(CadenceContext);
+
   return (
     <SegmentedControl
       aria-label='Monthly or yearly picker'

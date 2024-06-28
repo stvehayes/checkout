@@ -9,6 +9,7 @@ import { Method } from '../../components/Payment/Method/Method';
 import { Summary } from '../../components/Payment/Summary/Summary';
 import { ProductsContext } from '../../context/ProductsContext';
 import { Form } from './Form/Form';
+import { AddOns } from '../AddOns/AddOns';
 
 export function Payment() {
   const { selectedProduct } = useContext(ProductsContext);
@@ -53,6 +54,7 @@ export function Payment() {
       >
         <Account />
         <Seats />
+        {product.name === 'Enterprise' && <AddOns />}
         {product.form ? <Form /> : <Billing />}
         <Method />
       </PageLayout.Content>

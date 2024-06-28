@@ -24,19 +24,6 @@ export const products = [
     cadence: 'monthly',
     license: 'committer',
   },
-
-  // {
-  //   type: 'Subscribe',
-  //   name: 'Copilot',
-  //   seats: 10,
-  //   price: {
-  //     monthly: 19,
-  //     yearly: null,
-  //   },
-  //   description: 'The AI coding assistant elevating developer workflows',
-  //   cadence: 'monthly',
-  //   license: 'user',
-  // },
   {
     type: 'Subscribe',
     name: 'Team',
@@ -49,6 +36,18 @@ export const products = [
     cadence: 'monthly',
     license: 'user',
   },
+  // {
+  //   type: 'Subscribe',
+  //   name: 'Copilot',
+  //   seats: 10,
+  //   price: {
+  //     monthly: 19,
+  //     yearly: null,
+  //   },
+  //   description: 'The AI coding assistant elevating developer workflows',
+  //   cadence: 'monthly',
+  //   license: 'user',
+  // },
 ];
 
 export const organization = {

@@ -1,6 +1,6 @@
 import { Box as PrimerBox } from '@primer/react';
 
-export function Box({ children }) {
+export function Box({ children, sx }) {
   return (
     <PrimerBox
       sx={{
@@ -10,6 +10,7 @@ export function Box({ children }) {
         borderColor: 'border.default',
         boxShadow: 'shadow.small',
         p: 3,
+        ...sx,
       }}
     >
       {children}

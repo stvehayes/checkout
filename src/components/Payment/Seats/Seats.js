@@ -72,7 +72,7 @@ export function Seats() {
               / {product.license}
             </Text>
             <Text sx={{ fontSize: 0, color: 'fg.muted' }}>
-              {product.cadence === 'monthly' ? 'per month' : 'per year'}
+              {cadence === 'monthly' ? 'per month' : 'per year'}
             </Text>
           </Box>
         </Box>
