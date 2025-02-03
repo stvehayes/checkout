@@ -1,32 +1,24 @@
 import {
-  CommandPaletteIcon,
-  CopilotIcon,
-  GitPullRequestIcon,
-  InboxIcon,
   MarkGithubIcon,
   ThreeBarsIcon,
-  SearchIcon,
 } from '@primer/octicons-react';
 import {
   Avatar,
   Box,
   Heading,
   IconButton,
-  TextInput,
-  UnderlineNav,
-  Text,
 } from '@primer/react';
 import { ProductSwitcher } from '../../ProductSwitcher';
 import ColorModeSwitcher from '../../ColorModeSwitcher';
 
-export function Navigation({ enterprise }) {
+export function Navigation() {
   const src = 'https://avatars.githubusercontent.com/u/13389614?v=4';
   const style = {
     color: 'fg.muted',
   };
 
   return (
-    <Box sx={{}}>
+    <Box>
       <Box
         sx={{
           display: 'flex',
