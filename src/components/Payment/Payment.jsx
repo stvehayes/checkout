@@ -21,6 +21,7 @@ export function Payment() {
   const YEARLY_PRICE = currentProduct.price.yearly;
   const MONTHLY_PRICE = currentProduct.price.monthly;
   const PRODUCT = currentProduct.name;
+  const DESCRIPTION = currentProduct.description;
 
   // Only initialize billingPeriod state if yearly price exists
   const [billingPeriod, setBillingPeriod] = useState(YEARLY_PRICE ? 'monthly' : 'monthly');
@@ -101,6 +102,7 @@ export function Payment() {
               licenses={licenses}
               setLicenses={setLicenses}
               product={PRODUCT}
+              description={DESCRIPTION}
             />
             {currentProduct.addons && <AddOns />}
             <BillingInformation />

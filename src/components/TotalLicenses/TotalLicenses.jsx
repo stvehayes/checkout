@@ -8,6 +8,7 @@ function TotalLicenses({
   setBillingPeriod,
   setLicenses,
   product,
+  description,
 }) {
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -95,7 +96,7 @@ function TotalLicenses({
                 color: 'fg.muted',
               }}
             >
-              Security, compliance, and flexible deployment
+              {description}
             </Text>
           </Box>
 
