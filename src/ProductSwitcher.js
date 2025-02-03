@@ -23,10 +23,8 @@ export function ProductSwitcher() {
         }}
       >
         <ActionMenu>
-          <ActionMenu.Button size='small'>
-            <Box sx={{ display: 'inline-flex', alignItems: 'center', ml: 2 }}>
-              {products[selectedProduct].name}
-            </Box>
+          <ActionMenu.Button>
+            {products[selectedProduct].name}
           </ActionMenu.Button>
           <ActionMenu.Overlay align='right'>
             <ActionList showDividers>
