@@ -1,17 +1,11 @@
-import { Box, Text, Heading, TextInput, SegmentedControl, ToggleSwitch, RadioGroup, Radio, FormControl } from '@primer/react';
+import { Box, Text, Heading, ToggleSwitch, RadioGroup, Radio, FormControl } from '@primer/react';
 import { useContext, useState } from 'react';
 import { ProductsContext } from '../../context/ProductsContext';
 import { products } from '../../data/Data';
 
-function AddOns({
-  licenses,
-  monthlyPrice,
-  setLicenses,
-  product,
-}) {
+function AddOns() {
   const { selectedProduct } = useContext(ProductsContext);
   const currentProduct = products[selectedProduct];
-  const [enabledAddons, setEnabledAddons] = useState({});
   const [addonAccess, setAddonAccess] = useState({});
 
   const formatter = new Intl.NumberFormat('en-US', {

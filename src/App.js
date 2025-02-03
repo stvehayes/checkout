@@ -1,8 +1,6 @@
 import { ThemeProvider, BaseStyles, Box } from '@primer/react';
-import ColorModeSwitcher from './ColorModeSwitcher';
 import { Payment } from './pages/Payment';
 import { Navigation } from './components/Navigation/Navigation';
-import { ProductSwitcher } from './ProductSwitcher';
 
 function App() {
   return (
