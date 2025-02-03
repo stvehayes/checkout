@@ -11,6 +11,7 @@ export const products = [
       'Security, compliance, and flexible deployment for enterprises',
     cadence: 'monthly',
     license: 'user',
+    addons: ['Copilot', 'Advanced Security'],
   },
   {
     type: 'Subscribe',
@@ -36,18 +37,18 @@ export const products = [
     cadence: 'monthly',
     license: 'user',
   },
-  // {
-  //   type: 'Subscribe',
-  //   name: 'Copilot',
-  //   seats: 10,
-  //   price: {
-  //     monthly: 19,
-  //     yearly: null,
-  //   },
-  //   description: 'The AI coding assistant elevating developer workflows',
-  //   cadence: 'monthly',
-  //   license: 'user',
-  // },
+  {
+    type: 'Subscribe',
+    name: 'Copilot',
+    seats: 10,
+    price: {
+      monthly: 19,
+      yearly: null,
+    },
+    description: 'The AI coding assistant elevating developer workflows',
+    cadence: 'monthly',
+    license: 'user',
+  },
 ];
 
 export const organization = {

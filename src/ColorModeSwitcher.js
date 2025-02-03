@@ -56,7 +56,6 @@ function ColorModeSwitcher() {
         <ActionMenu>
           <ActionMenu.Button size='small'>
             <current.icon />
-            <Box sx={{ display: 'inline-block', ml: 2 }}> {current.name}</Box>
           </ActionMenu.Button>
           <ActionMenu.Overlay align='right'>
             <ActionList showDividers>

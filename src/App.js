@@ -8,21 +8,10 @@ function App() {
   return (
     <ThemeProvider colorMode='light'>
       <BaseStyles>
-        <Box
-          sx={{
-            p: 3,
-            display: 'flex',
-            gap: 2,
-            position: 'fixed',
-            bottom: 0,
-            right: 0,
-          }}
-        >
-          <ProductSwitcher />
-          <ColorModeSwitcher />
+        <Box sx={{ bg: 'canvas.default' }}>
+          <Navigation />
+          <Payment />
         </Box>
-        <Navigation />
-        <Payment />
       </BaseStyles>
     </ThemeProvider>
   );
